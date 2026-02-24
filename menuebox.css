@@ -1,0 +1,152 @@
+:root {
+  --bg-dark: #0b0b0b;
+  --bg-soft: #1b1b1b;
+  --text: #f4f4f4;
+  --muted: #b5b5b5;
+  --accent: #d5001c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: var(--bg-dark);
+}
+
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.75)),
+    url("https://4kwallpapers.com/images/walls/thumbs_3t/25139.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  letter-spacing: 5px;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.menu-wrap {
+  position: relative;
+}
+
+.dot-btn {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(12, 12, 12, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.dot-btn::-webkit-details-marker {
+  display: none;
+}
+
+.dot-btn span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.dot-menu {
+  position: absolute;
+  top: 58px;
+  right: 0;
+  min-width: 170px;
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 8px;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: 0.25s ease;
+  backdrop-filter: blur(100px);
+}
+
+.menu-wrap[open] .dot-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dot-menu a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.dot-menu a:hover {
+  background: var(--bg-soft);
+  color: #fff;
+}
+
+.hero-content {
+  width: min(1200px, 92%);
+  margin: auto;
+  padding-bottom: 80px;
+}
+
+.sub {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.82rem;
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 5rem);
+  margin-bottom: 22px;
+}
+
+.cta {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: var(--accent);
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding-top: 16px;
+  }
+
+  .brand {
+    font-size: 1rem;
+    letter-spacing: 3px;
+  }
+
+  .dot-btn {
+    width: 44px;
+    height: 44px;
+  }
+}

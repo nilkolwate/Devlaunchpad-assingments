@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-image: 
+    url("https://images.ctfassets.net/s699s7kh1jys/1WtJwqt7rpVxLp5NbgFQFI/a3f4f597b72e726041870bd69a270484/porsche_911_wallpapers_carrera_gts_2_desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.register-form {
+  width: 100%;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.register-form h1 {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.register-form label {
+  display: block;
+  margin: 10px 0 6px;
+  font-size: 14px;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.register-form button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: #cc0000;
+  font-size: 15px;
+
+}
